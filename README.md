@@ -720,7 +720,7 @@ GET https://free-fire-data.vercel.app/api/guildinfo?region=br&guild_id=61207059&
     }
   ]
 }
-
+```
 ---
 
 ## API de Pontuação Guerra de Guildas (GVG)
@@ -751,6 +751,7 @@ GET https://free-fire-data.vercel.app/api/gvg?region=br&guild_id=61207059&key=KE
     }
   ]
 }
+```
 
 ---
 
