@@ -669,6 +669,120 @@ Parâmetro de consulta `BR` é para todas as regiões que estão sob `client.us.
 }
 ```
 
+
+## 🏰 APIs de Guilda
+
+## API de Informações da Guilda
+Rota da API = https://free-fire-data.vercel.app/api/guildinfo?region={region}&guild_id={guild_id}&key={key}
+
+**Endpoint:** `api/guildinfo`  
+**Chave:** `SUA-CHAVE`  
+**Método:** `GET`  
+
+Este endpoint recupera informações completas de uma guilda, incluindo dados gerais e lista de jogadores.
+
+### 📨 Exemplo de Requisição
+GET https://free-fire-data.vercel.app/api/guildinfo?region=br&guild_id=61207059&key=KEY123
+
+### 💬 Exemplo de Resposta
+{
+  "guilda": {
+    "id": 12345678,
+    "nome": "TropaEliteBR",
+    "criadoEm": 1620000000,
+    "donoId": 987654321,
+    "nivel": 5,
+    "limiteMembros": 50,
+    "membrosAtuais": 47,
+    "descricao": "Guilda competitiva BR",
+    "regiao": "BR",
+    "energiaGuilda": 18500,
+    "atualizadoEm": 1778000000,
+    "rankingPosicao": 120,
+    "totalHonra": 3456789,
+    "honraSemanal": 84500,
+    "rankingGlobalPosicao": 450,
+    "tipoRelacionamento": 1778482800
+  },
+  "jogadores": [
+    {
+      "player_id": 10000001,
+      "nickname": "EliteX7",
+      "pais": "BR",
+      "level": 75,
+      "experiencia": 5000000,
+      "honra": 120000,
+      "honraSemanal": 2500,
+      "entradaNaGuilda": 1777000000,
+      "gvgTotal": 300,
+      "lastLoginAt": 1778050000
+    }
+  ]
+}
+
+---
+
+## API de Pontuação Guerra de Guildas (GVG)
+Rota da API = https://free-fire-data.vercel.app/api/gvg?region={region}&guild_id={guild_id}&key={key}
+
+**Endpoint:** `api/gvg`  
+**Método:** `GET`  
+
+Este endpoint recupera a pontuação dos membros da guilda que participaram do evento Guerra de Guildas.
+
+### 📨 Exemplo de Requisição
+GET https://free-fire-data.vercel.app/api/gvg?region=br&guild_id=61207059&key=KEY123
+
+### 💬 Exemplo de Resposta
+{
+  "status": "ok",
+  "guildID": "12345678",
+  "rodada": 2,
+  "data": [
+    {
+      "player_id": 10000001,
+      "pontos": 120
+    },
+    {
+      "player_id": 10000002,
+      "pontos": 95
+    }
+  ]
+}
+
+---
+
+## API de Convite para Guilda
+Rota da API = https://free-fire-data.vercel.app/api/inviteclanmember?region={region}&guild_id={guild_id}&player_id={player_id}&key={key}
+
+**Endpoint:** `api/inviteclanmember`  
+**Método:** `GET`  
+
+Este endpoint envia um convite de entrada na guilda para um jogador.
+
+### 📨 Exemplo de Requisição
+GET https://free-fire-data.vercel.app/api/inviteclanmember?region=br&guild_id=61207059&player_id=10000001&key=KEY123
+
+### 💬 Resposta
+200 OK → Convite enviado com sucesso
+
+---
+
+## API de Remoção de Membro da Guilda
+Rota da API = https://free-fire-data.vercel.app/api/removeclanmember?region={region}&guild_id={guild_id}&player_id={player_id}&key={key}
+
+**Endpoint:** `api/removeclanmember`  
+**Método:** `GET`  
+
+Este endpoint remove um jogador da guilda.
+
+### 📨 Exemplo de Requisição
+GET https://free-fire-data.vercel.app/api/removeclanmember?region=br&guild_id=61207059&player_id=10000001&key=KEY123
+
+### 💬 Resposta
+200 OK → Jogador removido com sucesso
+
+
 📚 **Objetivo da API**
 
 O objetivo principal de fornecer esta API gratuita é melhorar a experiência da comunidade Free Fire. A Garena Free Fire não oferece APIs oficiais de informações de conta, então esta solução personalizada visa preencher essa lacuna, fornecendo aos jogadores e desenvolvedores dados valiosos da conta.
