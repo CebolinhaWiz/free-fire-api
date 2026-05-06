@@ -685,6 +685,7 @@ Este endpoint recupera informações completas de uma guilda, incluindo dados ge
 GET https://free-fire-data.vercel.app/api/guildinfo?region=br&guild_id=61207059&key=KEY123
 
 ### 💬 Exemplo de Resposta
+```json
 {
   "guilda": {
     "id": 12345678,
@@ -734,6 +735,7 @@ Este endpoint recupera a pontuação dos membros da guilda que participaram do e
 GET https://free-fire-data.vercel.app/api/gvg?region=br&guild_id=61207059&key=KEY123
 
 ### 💬 Exemplo de Resposta
+```json
 {
   "status": "ok",
   "guildID": "12345678",
